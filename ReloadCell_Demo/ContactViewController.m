@@ -26,10 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
-    [self addSearchBar];
+   
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
+     [self addSearchBar];
     [self.view addSubview:_tableView];
     
 }
@@ -120,7 +121,7 @@
 #pragma mark 设置分组标题内容高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if(section==0){
-        return 50;
+        return 20;
     }
     return 20;
 }
